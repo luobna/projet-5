@@ -1,7 +1,19 @@
-import React from 'react'
+import Header from './Header';
+import Footer from './Footer';
+import { Outlet } from "react-router-dom";
 
-export default function Layout() {
-  return (
-    <div>Layout</div>
-  )
+
+
+
+function Layout(props) {
+  const{json}=props
+  JSON.stringify(json)
+  return <>
+      <Header/>
+      <Outlet/>
+      <Footer/>
+    </>
 }
+
+
+export default Layout;

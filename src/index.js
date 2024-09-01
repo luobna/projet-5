@@ -12,7 +12,7 @@ import{
   Route,
   Link,
 } from 'react-router-dom'
-import './assets/scss/index.scss';
+import './assets/sass/index.scss';
 
 
 
