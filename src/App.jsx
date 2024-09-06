@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Error404 from './pages/Error404';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from './components/Layout';
+import About from './pages/About';
 
 
 
@@ -16,10 +17,9 @@ function App(props) {
   return<Routes>
   <Route path="/" element={<Layout />}>
     <Route
-      path="/"
-      element={<Home />}
-    />
+      path="/" element={<Home />} />
     <Route path="*" element={<Error404 />} />
+    <Route path="/Apropos" element={<About />} />
   </Route>
 </Routes>
     

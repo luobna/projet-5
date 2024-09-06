@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 //import './index.css';
+import Layout from './components/Layout';
 import App from './App';
 import Home from './pages/Home';
-import About from './pages/about';
+import About from './pages/About';
+import Error404 from './pages/Error404';
 //import reportWebVitals from './reportWebVitals';
 import './json.json'
 import{
@@ -19,18 +21,22 @@ import './assets/sass/index.scss';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-  
-  },
-  {
-    path: "/",
-    element: <main/>,
-  
-  },
-
-  {
-    path: "about",
-    element: <About />,
+    element: <Layout/>,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      
+      },
+      {
+        path: "About",
+        element: <About />,
+      },
+      {
+        path: "*",
+        element: <Error404 />,
+      },
+    ]
   },
 ]);
 
