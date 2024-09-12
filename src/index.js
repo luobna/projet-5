@@ -6,6 +6,7 @@ import App from './App';
 import Home from './pages/Home';
 import About from './pages/About';
 import Error404 from './pages/Error404';
+import Location from './pages/Location';
 //import reportWebVitals from './reportWebVitals';
 import './json.json'
 import{
@@ -29,12 +30,16 @@ const router = createBrowserRouter([
       
       },
       {
-        path: "About",
+        path: "about",
         element: <About />,
       },
       {
         path: "*",
         element: <Error404 />,
+      },
+      {
+        path: "Location",
+        element: <Location />,
       },
     ]
   },

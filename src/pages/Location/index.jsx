@@ -1,7 +1,11 @@
-import React from 'react'
+import LocationLogement from "../../components/LocationLogement";
 
-export default function Location() {
+const Location = () => {
   return (
-    <div>Location</div>
-  )
-}
+    <div className="location">
+      <LocationLogement />
+    </div>
+  );
+};
+
+export default Location;

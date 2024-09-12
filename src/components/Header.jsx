@@ -1,5 +1,5 @@
 import logo from "../images/logoKasa.svg"
-import Navigation from "./navigation";
+import Navigation from "./Navigation";
 const Header = () => {
   return (
     <header>
