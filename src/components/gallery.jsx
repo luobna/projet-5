@@ -1,5 +1,5 @@
 import Thumb from "./Thumb";
-import locations from "../json.json";
+import locations from "../assets/dataJson/locations.json";
 
 const Gallery = () => {
     return (
