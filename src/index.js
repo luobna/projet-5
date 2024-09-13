@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Error404 from './pages/Error404';
 import Location from './pages/Location';
+import LocationLogement from '../src/components/LocationLogement';
 //import reportWebVitals from './reportWebVitals';
 import './json.json'
 import{
@@ -38,8 +39,8 @@ const router = createBrowserRouter([
         element: <Error404 />,
       },
       {
-        path: "Location",
-        element: <Location />,
+        path: "Location/:id",
+        element: <LocationLogement />,
       },
     ]
   },
