@@ -4,22 +4,24 @@
 /***********************************/
 /***********************************/
 /***********************************/
-//#root{
- // >header,>div{width:90%;margin: auto;}
-//}
+
 
 
 header {
   display: flex;
-  //margin: auto;
   max-width: 1240px;
   flex-direction: row;
-  //width: 95%;
   justify-content: space-between;
   align-items: flex-end;
   padding-top: 15px;
   padding-bottom: 20px;
-  
+  margin: auto;
+
+  @media screen and (max-width:768px) {
+    width: 90%;
+    ;
+  }
+
 
   .navigation {
     ul {
@@ -38,7 +40,8 @@ header {
         font-weight: bold;
         margin-left: 50px;
         cursor: pointer;
-        &.nav-underline{
+
+        &.nav-underline {
           border-bottom: solid 1px black;
         }
       }
@@ -50,7 +53,7 @@ header {
 .home {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 
   .banner {
@@ -69,9 +72,9 @@ header {
 
     @media screen and (max-width:768px) {
       height: 110px;
-      //border-radius: 10px;
       margin-bottom: 20px;
-      width: 65%;
+      width: 100%;
+      justify-content: start;
     }
 
     .bannerImg {
@@ -83,8 +86,8 @@ header {
 
       @media screen and (max-width:768px) {
         border-radius: 10px;
-        //width: 100%;
-        width: 53%;
+        width: 100%;
+
       }
     }
 
@@ -100,7 +103,10 @@ header {
       font-size: 50px;
 
       @media screen and (max-width:768px) {
-        font-size: 28px;
+        font-size: 23px;
+        width: 60%;
+        text-align: left;
+        padding-left: 1em;
       }
     }
   }
@@ -124,19 +130,27 @@ header {
       flex-direction: column;
       gap: 20px;
       padding: 0 0;
-      margin-bottom: 25px;
+      margin-bottom: -65px;
       background: none;
 
     }
+
     .thumb {
       position: relative;
-      a{
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        ;
+      }
+
+      a {
         text-decoration: none;
         color: black;
         display: block;
         overflow: hidden;
         position: relative;
         border-radius: 10px;
+
         &:before {
           content: "";
           width: 100%;
@@ -145,13 +159,16 @@ header {
           left: 0;
           box-shadow: 0 0 4em 10px black;
         }
+
         img {
           display: block;
           width: 100%;
           height: 240px;
           border-radius: 10px;
+
         }
       }
+
       h2 {
         position: absolute;
         bottom: 10px;
@@ -171,6 +188,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
@@ -184,9 +202,12 @@ h1 {
   text-align: center;
   color: #ff6060;
   margin: 0;
+
   @media screen and (max-width: 768px) {
-    font-size: 145px;
-    margin-bottom: 100px;
+    font-size: 110px;
+    font-family: Montserrat;
+    margin-top: 55px;
+    margin-bottom: 55px;
   }
 }
 
@@ -198,9 +219,15 @@ p {
   text-align: left;
   color: #ff6060;
   margin-bottom: 70px;
+
   @media screen and (max-width: 768px) {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
+    padding-left: 10px;
+    font-weight: normal;
+    margin-top: 30px;
+    font-family: Montserrat;
+    margin-bottom: 100px;
   }
 }
 
@@ -214,9 +241,15 @@ ul {
     text-align: left;
     color: black;
     cursor: pointer;
+
     @media screen and (max-width: 768px) {
-      font-size: 18px;
+      font-size: 15px;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-left: 10px;
+    ;
   }
 }
 
@@ -226,6 +259,11 @@ ul {
   gap: 10px;
   width: 81%;
   margin: 0 auto;
+
+  @media screen and (max-width:768px) {
+    width: 90%;
+    margin-bottom: -77px;
+  }
 }
 
 .bannerAbout {
@@ -234,11 +272,11 @@ ul {
 
 .bannerImgAbout {
   border-radius: 20px;
+
   @media screen and (max-width:768px) {
 
-width: 85%;
-height: 160px;
-margin-left: 45px;
+    width: 100%;
+    height: 160px;
   }
 }
 
@@ -251,6 +289,9 @@ margin-left: 45px;
   margin: 0 auto;
   width: 85%;
 
+  @media screen and (max-width:768px) {
+    width: 100%;
+  }
 }
 
 .headCollapsis {
@@ -321,8 +362,10 @@ h3 {
   margin: 0 auto;
   position: relative;
   width: 95%;
+
   .caroussel {
     position: relative;
+
     .slider {
       width: 100%;
       height: 34vh;
@@ -330,6 +373,7 @@ h3 {
       margin-top: 40px;
       object-fit: cover;
     }
+
     .arrowLeft {
       position: absolute;
       top: 140px;
@@ -338,7 +382,14 @@ h3 {
       width: 46px;
       padding-left: 20px;
       cursor: pointer;
+
+      @media screen and (max-width:768px) {
+        height: 30px;
+        top: 134px;
+        padding-left: 10px;
+      }
     }
+
     .arrowRight {
       position: absolute;
       top: 140px;
@@ -347,7 +398,14 @@ h3 {
       width: 46px;
       padding-right: 20px;
       cursor: pointer;
+
+      @media screen and (max-width:768px) {
+        height: 30px;
+        top: 134px;
+        padding-right: 10px;
+      }
     }
+
     .slide-indicator {
       position: absolute;
       bottom: 7%;
@@ -359,9 +417,11 @@ h3 {
       color: white;
     }
   }
+
   .loc-container-up-down {
     display: flex;
     flex-direction: column;
+
     p {
       color: #ff6060;
       font-family: Montserrat;
@@ -369,10 +429,19 @@ h3 {
       font-weight: 500;
       line-height: 142.6%;
       margin: 0;
+
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
     }
+
     .loc-content-up {
       display: flex;
       justify-content: space-between;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
 
       h2 {
         max-width: 700px;
@@ -381,7 +450,12 @@ h3 {
         font-size: 36px;
         font-weight: 500;
         margin: 10px 0 5px 0;
+
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+        }
       }
+
       h3 {
         color: black;
         font-family: Montserrat;
@@ -389,11 +463,18 @@ h3 {
         font-weight: bold;
         font-weight: 500;
         line-height: 142.6%;
+
+        @media screen and (max-width: 768px) {
+          font-size: 17px;
+          margin-left: 0;
+        }
       }
+
       .container-tags {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
+
         .tags {
           display: flex;
           justify-content: center;
@@ -406,21 +487,31 @@ h3 {
           font-size: 14px;
         }
       }
+
       .hostRating {
         display: flex;
         gap: 20px;
         flex-direction: column;
         box-sizing: border-box;
         align-items: flex-end;
-        
+
+        @media screen and (max-width: 768px) {
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 0;
+        }
+
         .host {
           display: flex;
+
           img {
             width: 64px;
             height: 64px;
             border-radius: 50%;
           }
         }
+
         h3 {
           color: #ff6060;
           text-align: right;
@@ -428,25 +519,47 @@ h3 {
           font-size: 18px;
           font-weight: 500;
           margin-right: 10px;
-          
+
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
+
         }
+
         .stars {
           color: #ff6060;
           height: 30px;
-          
+
+          @media screen and (max-width: 768px) {
+            height: 18px;
+          }
         }
+
         .starsGrey {
           color: #e3e3e3;
           height: 30px;
-          
+
+          @media screen and (max-width: 768px) {
+            height: 18px;
+          }
         }
       }
     }
+
     .loc-content-down {
       display: flex;
       gap: 70px;
       margin-top: 25px;
-      
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        padding: 10px 0;
+        margin-top: 0;
+        margin-bottom: -95px;
+      }
+
       li {
         list-style: none;
         color: black;
@@ -466,13 +579,19 @@ footer {
   background: #000;
   margin-top: 30px;
 
+  @media screen and (max-width:768px) {
+    margin-top: 90px;
+  }
+
+
+
   h3 {
     color: #FFF;
     text-align: center;
     background: black;
     margin-top: 0px;
   }
-  
+
 }
 
 
