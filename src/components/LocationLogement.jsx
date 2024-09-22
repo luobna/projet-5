@@ -18,7 +18,7 @@ const LocationLogement = () => {
   }, [id, location, navigate]);
     // Vérifiez si location est définie avant d'accéder à ses propriétés
     if (!location) {
-      return null; // Ou affichez un composant d'erreur approprié
+      return null; // Ou afficher un composant d'erreur approprié
     }
     
   return (
