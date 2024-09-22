@@ -16,7 +16,7 @@ const LocationLogement = () => {
       navigate("/error");
     }
   }, [id, location, navigate]);
-    // Vérifiez si location est défini avant d'accéder à ses propriétés
+    // Vérifiez si location est définie avant d'accéder à ses propriétés
     if (!location) {
       return null; // Ou affichez un composant d'erreur approprié
     }
